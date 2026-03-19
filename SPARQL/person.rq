@@ -1,7 +1,7 @@
 SELECT ?lang ?article WHERE {
   VALUES ?lang { "af" "en" "nr" "nso" "st" "ss" "ts" "tn" "ve" "xh" "zu" }
 
-  ?article schema:about wd:Q43033 ;
+  ?article schema:about wd:Q43033 ; #in this case we are looking for people who are associated with peace
            schema:isPartOf ?wiki .
 
   FILTER(CONTAINS(STR(?wiki), CONCAT(?lang, ".wikipedia.org")))
