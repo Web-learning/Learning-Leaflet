@@ -18,3 +18,12 @@ MAP (Leaflet)<br/>
 +-------------------------------------------------------+<br/>
 |  Layer Control: Property | Structures | Photographs  |<br/>
 +-------------------------------------------------------+<br/>
+  L.control.layers(null, {
+    "Property": propertyLayer,
+    "Structures": structuresLayer,
+    "Photographs": photosLayer
+  }, { collapsed:false }).addTo(map);
+  
+
+
++-------------------------------------------------------+<br/>
