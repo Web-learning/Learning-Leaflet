@@ -1,4 +1,4 @@
-# Building a leaflet maps (in layers)
+# Building your own leaflet map (in layers)
 //The Document Object Model (DOM) event fires when the HTML document has been completely parsed<br/>
 
 `document.addEventListener("DOMContentLoaded", function () {`
