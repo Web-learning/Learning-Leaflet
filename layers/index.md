@@ -1,14 +1,16 @@
-//The DOMCONTENT LOADER DOM event fires when the HTML document has been completely parsed<br/>
+# Building a leaflet maps (in layers)
+//The Document Object Model (DOM) event fires when the HTML document has been completely parsed<br/>
 
-document.addEventListener("DOMContentLoaded", function () {
+`document.addEventListener("DOMContentLoaded", function () {`
+<br/>
 +-------------------------------------------------------+<br/>
-// Set lattitude and longitude and initialize map
+// We set lattitude, longitude and initialize map
 
-var latit = 48.8336;
-var longit = 2.3758;
-const map = L.map('map', {
-  doubleClickZoom: false
-}).setView([latit, longit], 16); 
+`var latit = 48.8336;` 
+`var longit = 2.3758;`
+`const map = L.map('map', {`
+  `doubleClickZoom: false`
+`}).setView([latit, longit], 16); `
 <br/>
 
 +-------------------------------------------------------+<br/>
