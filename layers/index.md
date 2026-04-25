@@ -22,33 +22,25 @@
   }).addTo(map);
 
 +-------------------------------------------------------+<br/>
-// This is where the co-ordinates are read. 
-coords = full polygon definition
-coords[0] = outer boundary
-coords[1] = holes inside the polygon
-slice(1) = extract all holes
+// This is where the co-ordinates are fetched from github. 
+// 3. Fetch GeoJSON
+const geojsonUrl = "https://raw.githubusercontent.com/Web-learning/geojson/refs/heads/main/artsfestivals/southafrica.geojson";
 
-[Property Layer] - Outer Polygon (orange fill)<br/>
-+-------------------------------------------------------+<br/>
-// Each of these structures are a separate polygon. Four buildings are mentioned below, but there is a centre quadrant
-[Structures Layer] - Blue polygons<br/>        
-+----------------+  +-------------+  <br/>
-| Structure 1    |  | Structure 2 |  <br/>
-+----------------+  +-------------+  <br/>
-| Structure 3    |  | Structure 4 | <br/>
-+----------------+  +-------------+ <br/>
+fetch(geojsonUrl)
+  .then(response => response.json())
+  .then(data => {
 +---------------------------------------------+ <br/> 
 
- [Photos Layer] - Markers with Images & Tooltips    <br/>
+ [GEOJSON Layer] - Markers     <br/>
 +-------------------------------------------------------+<br/>
-|  Layer Control: Property | Structures | Photographs  |<br/>
-+-------------------------------------------------------+<br/>
-  L.control.layers(null, {
-    "Property": propertyLayer,
-    "Structures": structuresLayer,
-    "Photographs": photosLayer
-  }, { collapsed:false }).addTo(map);
-  
+  // 4. Add GeoJSON layer
+    const geoLayer = L.geoJSON(data, {
 
 
-+-------------------------------------------------------+<br/>
+    }).addTo(map);
+
+    // 5. Zoom map to GeoJSON bounds
+    map.fitBounds(geoLayer.getBounds());
+
+  })
+  .catch(err => console.error("Error loading GeoJSON:", err));
