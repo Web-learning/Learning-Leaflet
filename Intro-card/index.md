@@ -2,7 +2,8 @@
   <tr>
     <td style="background:#0d1117; color:#c9d1d9; padding:16px; border-radius:10px; border:1px solid #30363d;">
       <h3>💡 [HTML](card.html) </h3>
-   </td>
+   [Contribution guidelines for this project](docs/CONTRIBUTING.md)
+    </td>
     <td style="background:#0d1117; color:#c9d1d9; padding:16px; border-radius:10px; border:1px solid #30363d;">
       <h3>🎨 CSS</h3>
       Content for column two.
