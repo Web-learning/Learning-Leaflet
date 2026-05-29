@@ -1,4 +1,4 @@
-// 3. Fetch GeoJSON
+// 3. Fetch GeoJSON shape
 const geojsonUrl = "INSERT URL";
 
 fetch(geojsonUrl)
