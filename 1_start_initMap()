@@ -1,0 +1,25 @@
+## Scenario
+You run a tour business and you take people around a variety of places. You want to send the tourists a map
+
+// L.map(): is a reusable function from Leaflet.  
+// It has a latitude and a longitude degrees 
+
+var map = L.map('map', {
+    center: [-26.446389, 31.201667],
+    zoom: 14
+});
+
+// This map points to 26°26'47.0"S 31°12'06.0"E
+// Go ahead and try it on Google. You will find Lobamba - the capital of Eswatini
+
+# INTRODUCTION to LEAFLET
+//First step is to open and close the script tags and add the variable  
+<script>
+ var map L.map()
+</script>
+// setView(): Allows you to decide the maps center 
+//Second step is to create two variables that inform initMap() with latitude and longitude and zoom level 
+<script>
+.setView([lat, long], zoomLevel)
+<script>
+
